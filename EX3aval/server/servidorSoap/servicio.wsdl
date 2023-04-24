@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://localhost/EX3aval/server/servidorSoap/servidor.php" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="Clases.Operacions" targetNamespace="http://localhost/EX3aval/server/servidorSoap/servidor.php">
+  <types>
+    <xsd:schema targetNamespace="http://localhost/EX3aval/server/servidorSoap/servidor.php">
+      <xsd:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+    </xsd:schema>
+  </types>
+  <portType name="Clases.OperacionsPort">
+    <operation name="nomeBici">
+      <input message="tns:nomeBiciIn"/>
+      <output message="tns:nomeBiciOut"/>
+    </operation>
+    <operation name="prezo">
+      <input message="tns:prezoIn"/>
+      <output message="tns:prezoOut"/>
+    </operation>
+    <operation name="rexistroCompleto">
+      <input message="tns:rexistroCompletoIn"/>
+      <output message="tns:rexistroCompletoOut"/>
+    </operation>
+  </portType>
+  <binding name="Clases.OperacionsBinding" type="tns:Clases.OperacionsPort">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="nomeBici">
+      <soap:operation soapAction="http://localhost/EX3aval/server/servidorSoap/servidor.php#nomeBici"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/EX3aval/server/servidorSoap/servidor.php"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/EX3aval/server/servidorSoap/servidor.php"/>
+      </output>
+    </operation>
+    <operation name="prezo">
+      <soap:operation soapAction="http://localhost/EX3aval/server/servidorSoap/servidor.php#prezo"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/EX3aval/server/servidorSoap/servidor.php"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/EX3aval/server/servidorSoap/servidor.php"/>
+      </output>
+    </operation>
+    <operation name="rexistroCompleto">
+      <soap:operation soapAction="http://localhost/EX3aval/server/servidorSoap/servidor.php#rexistroCompleto"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/EX3aval/server/servidorSoap/servidor.php"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://localhost/EX3aval/server/servidorSoap/servidor.php"/>
+      </output>
+    </operation>
+  </binding>
+  <message name="nomeBiciIn">
+    <part name="id" type="xsd:int"/>
+  </message>
+  <message name="nomeBiciOut">
+    <part name="return" type="xsd:string"/>
+  </message>
+  <message name="prezoIn">
+    <part name="id" type="xsd:int"/>
+  </message>
+  <message name="prezoOut">
+    <part name="return" type="xsd:float"/>
+  </message>
+  <message name="rexistroCompletoIn">
+    <part name="id" type="xsd:int"/>
+  </message>
+  <message name="rexistroCompletoOut">
+    <part name="return" type="xsd:string"/>
+  </message>
+  <service name="Clases.OperacionsService">
+    <port name="Clases.OperacionsPort" binding="tns:Clases.OperacionsBinding">
+      <soap:address location="http://localhost/EX3aval/server/servidorSoap/servidor.php"/>
+    </port>
+  </service>
+</definitions>

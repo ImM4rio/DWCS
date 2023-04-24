@@ -1,0 +1,22 @@
+{
+    "name": "onacho/server",
+    "type": "project",
+    "config": {
+        "optimize-autoloader": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Clases\\": "src"
+        }
+    },
+    "require": {
+        "php2wsdl/php2wsdl": "^0.6.1"
+    },
+    "license": "GNU/GPL",
+    "authors": [
+        {
+            "name": "Nacho",
+            "email": "onacho@iessanclemente.net"
+        }
+    ]
+}
