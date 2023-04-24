@@ -1,0 +1,54 @@
+form#generico{
+    margin: 0 auto;
+    width: 25%;   
+}
+
+#botones{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+
+}
+
+a{
+    float: right;
+    font-size: 12px;
+   
+}
+
+table#productos{
+    width: 60%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+
+table#comentarios{
+    margin: 0 auto;
+    border:1px dashed grey;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+
+#comentarioForm{
+    width: 30%;
+    margin: 0 auto;
+    
+}
+
+table#usuarios{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+
+table#usuarios td{
+    border: 2px solid black;
+    padding: 5px;
+    text-align: center;
+}
+

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        form{
+            width: 50%;
+            margin: 0 auto;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="mostra.php" method="post">
+        <fieldset>
+            <legend>Rellena los siguientes campos</legend>
+            <label for="nombre">Nombre: </label><br>
+            <input type="text" name="nombreTxt" placeholder="Introduce tu nombre"><br>
+            <label for="comentario">Comentario: </label><br>
+            <textarea name="comentarioTxtA" cols="30" rows="10" placeholder="Escribe tu comentario aquí"></textarea><br>            
+        </fieldset>
+        <input type="submit" name="aceptarBtn" value="Aceptar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login.html</title>
+    <style>
+        form{
+            margin: 0 auto;
+            width: 20%;
+            margin-top: 20px;
+        }
+
+        fieldset{
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .botones{
+            display: flex;
+            justify-content: flex-end;
+
+        }
+        
+        .botones > input{
+            font-weight: bold;
+        }
+
+        .botones > input.aceptar:hover{
+            background-color: lawngreen;
+            transition: 1s ease-in-out;
+            
+        }
+
+        .botones > input.borrar:hover{
+            background-color: red;
+            transition: 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <form action="cookieArray.php" method="POST">
+        <fieldset>
+            <legend>Datos de usuario</legend>
+            <label for="nome">Nombre: </label>
+            <input type="text" name="nombreTxt" required pattern="^[\w\dñ]{1,20}$" placeholder="Introduce nombre"><br>
+            <label for="apellido">Apellido: </label>
+            <input type="text" name="apellidoTxt" required pattern="^[\w\dñ]{1,20}$" placeholder="Introduce apellido"><br>
+            <label for="email">Email: </label>
+            <input type="email" name="mail" placeholder="Introduce mail">
+        </fieldset>
+        <label class="botones" for="botones">
+            <input class="aceptar" name="aceptarBtn" type="submit" value="Aceptar!">
+            <input class="borrar" type="reset" value="Borrar">
+        </label>
+        
+    </form>
+</body>
+</html>

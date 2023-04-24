@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="estilos.css" type="text/css">
+</head>
+<body>
+    <form action="login.php" id="generico" method="POST">
+        <fieldset>
+            <legend>Datos de registro</legend>
+            <label for="nombre">Nombre de usuario: </label><br>
+            <input type="text" name="usuarioTxt" required placeholder="Nombre de usuasrio" pattern="^[\w\d\S]{4, 30}$"><br>
+            <label for="nombre">Nombre Completo: </label><br>
+            <input type="text" name="nombreTxt" required placeholder="Introduce tu nombre" pattern="^[\w]{4, 30}$"><br>
+            <label for="pass">Contraseña:</label><br>
+            <input type="password" name="passPsw" required placeholder="Introduce contraseña" pattern="^[\w\d\S@#$%&()_.]{4,30}$"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" name="mailE" required placeholder="Introduce tu email"><br>
+        </fieldset>
+        <div id="botones">
+            <input type="submit" value="Registrarse" name="registrarseBtn">
+            <input type="reset" value="Borrar">
+        </div>
+        <a href="login.php">Log in</a>
+    </form>
+</body>
+</html>

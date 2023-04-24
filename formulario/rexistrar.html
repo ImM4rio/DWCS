@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <style>
+        form{
+            width: 40%;
+            margin: 0 auto;
+            margin-top: 10%;
+        }
+
+        input:invalid {
+            border: red solid 1px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <form action="garda.php" method="post">
+        <fieldset>
+            <legend>Registrar un usuario</legend>
+            <label for="nombre">Nombre: <input type="text" name="nombre" required placeholder="Introduce tu nombre"></label>
+            <label for="pass">Contraseña: <input type="password" name="pass" required minlength="8" placeholder="Introduce contraseña"></label>
+        </fieldset>
+        <button type="submit">Guardar</button>
+        <button type="reset">Borrar</button>
+    </form>
+</body>
+</html>
