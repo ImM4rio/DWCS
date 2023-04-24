@@ -1,0 +1,91 @@
+table#productos, tr, td{
+    border-collapse: collapse;
+    border: 3px solid purple;
+    text-align: center;
+    align-items: center;
+}
+
+td.precio{
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.precio:after{
+    content: "€";
+}
+
+.tdImagen {
+    overflow: hidden;
+}
+
+.productosImg {
+    width: 30%;
+}
+
+.productosImg:hover{
+    -webkit-transform:scale(2);
+    transform:scale(2);
+    transition: transform .5s ease-in-out;
+}
+
+div#botones {
+    max-width: 1000.42px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+div#pedidoFormDiv {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    min-width: 450px;
+    
+}
+
+form#pedidoForm {
+    min-width: 400px;
+    text-align: center;
+    display: none;
+}
+
+form#pedidoForm label{
+    color: purple;
+    font-size: larger;
+    display: flex;
+    flex-direction: row;
+    line-height: 30px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+
+}
+
+legend{
+    color: purple;
+}
+
+form#pedidoForm input[type='submit']{
+    margin-top: 40px;
+    width: 50%;
+
+}
+
+.imgPedido{
+    width: 15%;
+    margin-right: 10px;
+    
+}
+
+div#resumenPed{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-weight: bold;
+}
+
+#map {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+}
